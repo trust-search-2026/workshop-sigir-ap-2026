@@ -117,8 +117,10 @@
     .person p { margin: 6px 0 0; font-size: .92rem; color: var(--muted); }
 
     .pc { columns: 2 300px; column-gap: 32px; padding: 0; list-style: none; margin-top: 20px; }
-    .pc li { break-inside: avoid; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .pc li { break-inside: avoid; padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 14px; }
     .pc li span { display: block; color: var(--muted); font-size: .92rem; }
+    .pc .pic { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; background: var(--bg-soft);
+      display: grid; place-items: center; font: 600 1rem "Source Serif 4", serif; color: var(--brand); }
     .pc a { text-decoration: none; font-weight: 600; color: var(--ink); }
     .pc a:hover { color: var(--brand); }
 
@@ -308,22 +310,22 @@
     <!-- To use a photo, replace <div class="avatar">XX</div> with <img class="avatar" src="images/name.jpg" alt="Name"> -->
     <div class="people">
       <div class="person">
-        <img class="avatar" src="https://www.comp.nus.edu.sg/~sochr/www/stfphotos/chuats.jpg" alt="Tat-Seng Chua">
+        <img class="avatar" src="images/chua.jpg" alt="Tat-Seng Chua">
         <a class="name" href="https://www.comp.nus.edu.sg/cs/people/chuats/" target="_blank" rel="noopener">Tat-Seng Chua</a>
         <p>School of Computing,<br>National University of Singapore</p>
       </div>
       <div class="person">
-        <div class="avatar">XS</div>
+        <img class="avatar" src="images/shen.jpg" alt="Xin Shen">
         <a class="name" href="#">Xin Shen</a>
         <p>Huawei</p>
       </div>
       <div class="person">
-        <img class="avatar" src="https://blog.nus.edu.sg/matzhlei/files/2019/11/matzhlei-e1574776478709.jpg" alt="Lei Zhang">
+        <img class="avatar" src="images/zhang-lei.jpg" alt="Lei Zhang">
         <a class="name" href="https://blog.nus.edu.sg/matzhlei/" target="_blank" rel="noopener">Lei Zhang</a>
         <p>Department of Mathematics,<br>National University of Singapore</p>
       </div>
       <div class="person">
-        <img class="avatar" src="https://scholars.cityu.edu.hk/files-asset/88061979/ZHAO_Xiangyu.jpg?w=320&amp;f=jpg" alt="Xiangyu Zhao">
+        <img class="avatar" src="images/zhao-xiangyu.jpg" alt="Xiangyu Zhao">
         <a class="name" href="https://scholars.cityu.edu.hk/en/persons/xianzhao/" target="_blank" rel="noopener">Xiangyu Zhao</a>
         <p>Department of Data Science,<br>City University of Hong Kong</p>
       </div>
@@ -332,13 +334,14 @@
     <h2 style="margin-top:56px">Program Committee</h2>
     <!-- Only list members who have confirmed. -->
     <ul class="pc">
-      <li><a href="https://air.tsinghua.edu.cn/info/1046/1200.htm" target="_blank" rel="noopener">Yanyan Lan</a><span>Institute for AI Industry Research, Tsinghua University</span></li>
-      <li><a href="https://gr.xjtu.edu.cn/lqdong/" target="_blank" rel="noopener">Qidong Liu</a><span>Xi'an Jiaotong University</span></li>
-      <li><a href="#">Yunshan Ma</a><span>Singapore Management University</span></li>
-      <li><a href="https://tanmnguyen89.github.io/" target="_blank" rel="noopener">Tan Minh Nguyen</a><span>National University of Singapore</span></li>
-      <li><a href="https://vyftan.github.io/" target="_blank" rel="noopener">Vincent Y. F. Tan</a><span>National University of Singapore</span></li>
-      <li><a href="https://ruc-iir-lab.github.io/team/junxu" target="_blank" rel="noopener">Jun Xu</a><span>Gaoling School of AI, Renmin University of China</span></li>
-      <li><a href="#">Huan Yang</a><span>Huawei</span></li>
+      <li><img class="pic" src="images/pc-lan.jpg" alt=""><div><a href="https://air.tsinghua.edu.cn/info/1046/1200.htm" target="_blank" rel="noopener">Yanyan Lan</a><span>Institute for AI Industry Research, Tsinghua University</span></div></li>
+      <li><img class="pic" src="images/pc-liu.jpg" alt=""><div><a href="https://gr.xjtu.edu.cn/lqdong/" target="_blank" rel="noopener">Qidong Liu</a><span>Xi'an Jiaotong University</span></div></li>
+      <li><img class="pic" src="images/pc-ma.jpg" alt=""><div><a href="https://mysbupt.github.io/" target="_blank" rel="noopener">Yunshan Ma</a><span>Singapore Management University</span></div></li>
+      <li><img class="pic" src="images/pc-nguyen.jpg" alt=""><div><a href="https://tanmnguyen89.github.io/" target="_blank" rel="noopener">Tan Minh Nguyen</a><span>National University of Singapore</span></div></li>
+      <li><img class="pic" src="images/pc-tan.jpg" alt=""><div><a href="https://vyftan.github.io/" target="_blank" rel="noopener">Vincent Y. F. Tan</a><span>National University of Singapore</span></div></li>
+      <li><img class="pic" src="images/pc-xu.jpg" alt=""><div><a href="https://ruc-iir-lab.github.io/team/junxu" target="_blank" rel="noopener">Jun Xu</a><span>Gaoling School of AI, Renmin University of China</span></div></li>
+      <li><div class="pic">HY</div><div><a href="#">Huan Yang</a><span>Huawei</span></div></li>
+      <li><img class="pic" src="images/pc-zhao-xiaoyan.jpg" alt=""><div><a href="https://xyzhao01.github.io/" target="_blank" rel="noopener">Xiaoyan Zhao</a><span>National University of Singapore</span></div></li>
     </ul>
   </div>
 </section>
