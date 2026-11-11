@@ -265,16 +265,14 @@
       <h3 style="margin-top:24px">Review Process</h3>
       <p>Each submission will be reviewed by at least two program committee members for relevance, technical clarity, soundness, novelty, and potential to stimulate discussion. Selected contributions will receive a <strong>lightning-talk slot</strong>; other accepted contributions may be used as discussion prompts.</p>
       <p>Attendance is open to all registered SIGIR-AP participants, with or without an accepted paper.</p>
-      <!-- TODO: replace href with your submission link -->
-      <a class="btn solid" href="#" style="margin-top:8px">Submit via EasyChair (link TBA)</a>
+      <button type="button" class="btn solid" id="submit-button" aria-expanded="false" aria-controls="submission-email" style="margin-top:8px; border:0; font:inherit; font-weight:600; cursor:pointer">Submit</button>
+      <p id="submission-email" hidden><a href="mailto:matzhlei@nus.edu.sg">matzhlei@nus.edu.sg</a></p>
     </div>
     <div class="card" id="dates">
       <h3>Important Dates</h3>
       <!-- TODO: fill in real dates. To show an extended deadline use: <s>Old date</s> New date -->
       <ul class="dates">
-        <li><span>Paper submission</span><span class="d">November 23, 2026</span></li>
-        <li><span>Notification</span><span class="d tba">TBA</span></li>
-        <li><span>Camera-ready</span><span class="d tba">TBA</span></li>
+        <li><span>Presentation-only submission</span><span class="d">December 1, 2026</span></li>
         <li><span>Workshop day</span><span class="d">December 13, 2026</span></li>
       </ul>
       <p style="margin-top:12px;font-size:.88rem">All deadlines are Anywhere on Earth (AoE).</p>
@@ -355,8 +353,7 @@
     </div>
     <div class="card">
       <h3>Contact</h3>
-      <!-- TODO: replace with your workshop email -->
-      <p>Questions about the workshop or submissions? Email us at <a href="mailto:trust-search@example.com">trust-search@example.com</a>.</p>
+      <p>Questions about the workshop or submissions? Email us at <a href="mailto:matzhlei@nus.edu.sg">matzhlei@nus.edu.sg</a>.</p>
     </div>
   </div>
 </section>
@@ -379,6 +376,13 @@
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     menu.classList.remove('open'); btn.textContent = 'Menu'; btn.setAttribute('aria-expanded', false);
   }));
+
+  const submitButton = document.getElementById('submit-button');
+  const submissionEmail = document.getElementById('submission-email');
+  submitButton.addEventListener('click', () => {
+    submissionEmail.hidden = !submissionEmail.hidden;
+    submitButton.setAttribute('aria-expanded', String(!submissionEmail.hidden));
+  });
 </script>
 </body>
 </html>
